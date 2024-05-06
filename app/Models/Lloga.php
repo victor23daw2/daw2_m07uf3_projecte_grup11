@@ -15,12 +15,12 @@ class Lloga extends Model
     protected $fillable = [
         'Dni_client',
         'Matricula_auto',
-        'Data_del_prestec',
-        'Data_de_devolucio',
-        'Lloc_de_devolucio',
+        'Data_prestec',
+        'Data_devolucio',
+        'Lloc_devolucio',
         'Preu_per_dia',
         'Prestec_amb_retorn_de_deposit_ple',
-        'Tipus_d_asseguranca',
+        'Tipus_asseguranca',
     ];
 
     // Métodos útiles para interactuar con la tabla LLOGA

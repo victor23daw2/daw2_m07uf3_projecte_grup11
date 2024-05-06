@@ -15,7 +15,7 @@
         </ul>
       </div>
     @endif
-    <form method="POST" action="/client">
+    <form method="POST" action="/clients">
         @csrf
         <!-- https://laravel.com/docs/10.x/csrf -->
         <div class="form-group">           

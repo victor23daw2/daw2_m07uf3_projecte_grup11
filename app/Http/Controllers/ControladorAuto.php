@@ -41,7 +41,7 @@ class ControladorAuto extends Controller
     'Grandaria_maleter' => 'required',
     'Tipus_combustible' => 'required',
     ]);
-    $Auto = Auto::create($nouAuto);
+    $auto = Auto::create($nouAuto);
     return view('dashboard');
     }
 

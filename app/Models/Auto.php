@@ -14,14 +14,14 @@ class Auto extends Model
     protected $keyType = 'string';
     protected $fillable = [
         'Matricula_auto',
-        'Numero_de_bastidor',
+        'Numero_bastidor',
         'Marca',
         'Model',
         'Color',
-        'Nombre_de_places',
-        'Nombre_de_portes',
-        'Grandaria_del_maleter',
-        'Tipus_de_combustible',
+        'Nombre_places',
+        'Nombre_portes',
+        'Grandaria_maleter',
+        'Tipus_combustible',
     ];
 
     // Métodos útiles para interactuar con la tabla AUTOS

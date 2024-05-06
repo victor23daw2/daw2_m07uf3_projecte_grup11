@@ -18,15 +18,15 @@
         </div>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                <a href="{{ url('clients/creaClient') }}">Crea un nou Client<a/>
+                <a href="{{ url('clients/create') }}">Crea un nou Client<a/>
             </div>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900">
-            <a href="{{ url('autos/creaAuto') }}">Crea un nou auto<a/>
+            <a href="{{ url('autos/create') }}">Crea un nou auto<a/>
             </div>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900">
-            <a href="{{ url('lloga/creaLloga') }}">Crea un nou LLoguer<a/>
+            <a href="{{ url('lloga/create') }}">Crea un nou LLoguer<a/>
             </div>
         </div>
         </div>
