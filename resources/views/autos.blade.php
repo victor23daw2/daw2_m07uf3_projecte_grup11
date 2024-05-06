@@ -20,15 +20,15 @@
     <tbody>
     @foreach($dades_auto as $auto)
         <tr>
-            <td>{{$auto->matricula_auto}}</td>
-            <td>{{$auto->numero_bastidor}}</td>
-            <td>{{$auto->marca}}</td>
-            <td>{{$auto->model}}</td>
-            <td>{{$auto->color}}</td>
-            <td>{{$auto->nombre_places}}</td>
-            <td>{{$auto->nombre_portes}}</td>
-            <td>{{$auto->grandaria_maleter}}</td>
-            <td>{{$auto->tipus_combustible}}</td>
+            <td>{{$auto->Matricula_auto}}</td>
+            <td>{{$auto->Numero_bastidor}}</td>
+            <td>{{$auto->Marca}}</td>
+            <td>{{$auto->Model}}</td>
+            <td>{{$auto->Color}}</td>
+            <td>{{$auto->Nombre_places}}</td>
+            <td>{{$auto->Nombre_portes}}</td>
+            <td>{{$auto->Grandaria_maleter}}</td>
+            <td>{{$auto->Tipus_combustible}}</td>
         </tr>
     @endforeach
     </tbody>

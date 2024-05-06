@@ -18,13 +18,18 @@
     <tbody>
     @foreach($dades_client as $client)
         <tr>
-            <td>{{$client->dni}}</td>
-            <td>{{$client->nom_i_cognoms}}</td>
-            <td>{{$client->adreca}}</td>
-            <td>{{$client->telefon}}</td>
-            <td>{{$client->email}}</td>
-            <td>{{$client->data_naixement}}</td>
-            <td>{{$client->sexe}}</td>
+            <td>{{$client->Dni_client}}</td>
+            <td>{{$client->Nom_i_cognoms}}</td>
+            <td>{{$client->Edat}}</td>
+            <td>{{$client->Telefon}}</td>
+            <td>{{$client->Adreca}}</td>
+            <td>{{$client->Ciutat}}</td>
+            <td>{{$client->Pais}}</td>
+            <td>{{$client->Email}}</td>
+            <td>{{$client->Numero_permis_conduccio}}</td>
+            <td>{{$client->Punts_permis_conduccio}}</td>
+            <td>{{$client->Tipus_targeta}}</td>
+            <td>{{$client->Numero_targeta}}</td>
         </tr>
     @endforeach
     </tbody>

@@ -19,14 +19,14 @@
     <tbody>
     @foreach($dades_lloga as $lloguer)
         <tr>
-            <td>{{$lloguer->dni_client}}</td>
-            <td>{{$lloguer->matricula_auto}}</td>
-            <td>{{$lloguer->data_prestec}}</td>
-            <td>{{$lloguer->data_devolucio}}</td>
-            <td>{{$lloguer->lloc_devolucio}}</td>
-            <td>{{$lloguer->preu_per_dia}}</td>
-            <td>{{$lloguer->prestec_retorn_diposit_ple}}</td>
-            <td>{{$lloguer->tipus_asseguranca}}</td>
+            <td>{{$lloguer->Dni_client}}</td>
+            <td>{{$lloguer->Matricula_auto}}</td>
+            <td>{{$lloguer->Data_prestec}}</td>
+            <td>{{$lloguer->Data_devolucio}}</td>
+            <td>{{$lloguer->Lloc_devolucio}}</td>
+            <td>{{$lloguer->Preu_per_dia}}</td>
+            <td>{{$lloguer->Prestec_retorn_diposit_ple}}</td>
+            <td>{{$lloguer->Tipus_assegurança}}</td>
         </tr>
     @endforeach
     </tbody>

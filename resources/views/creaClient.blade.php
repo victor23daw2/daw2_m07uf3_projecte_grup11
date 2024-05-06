@@ -47,8 +47,8 @@
             <input type="text" class="form-control" name="Pais"/>
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" name="email"/>
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" name="Email"/>
         </div>
         <div class="form-group">           
             <label for="Numero_del_permis_de_conduccio">Nº permís conducció</label>
