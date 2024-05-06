@@ -11,7 +11,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        // //
+        // $middleware->validateCsrfTokens(except: [
+        //     '/nouauto', // Excluir esta ruta de la validación CSRF
+        // ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
