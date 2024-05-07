@@ -14,6 +14,7 @@
             <td>Preu per Dia</td>
             <td>Préstec amb Retorn de Dipòsit Ple</td>
             <td>Tipus d'Assegurança</td>
+            <td>Accions sobre la taula</td> 
         </tr>
     </thead>
     <tbody>
@@ -28,6 +29,15 @@
             <td>{{$lloguer->Prestec_retorn_diposit_ple}}</td>
             <td>{{$lloguer->Tipus_assegurança}}</td>
         </tr>
+        <td class="text-left">
+        <form action="{{ route('lloga.destroy', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" method="post" style="display: inline-block">
+  @csrf
+  @method('DELETE')
+  <button class="btn btn-danger btn-sm" type="submit">
+    Esborra
+  </button>
+</form>
+ </td>
     @endforeach
     </tbody>
 </table>

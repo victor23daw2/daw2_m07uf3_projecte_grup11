@@ -15,6 +15,7 @@
             <td>Nombre de portes</td>
             <td>Grandària del maleter</td>
             <td>Tipus de combustible</td>
+            <td>Accions sobre la taula</td> 
         </tr>
     </thead>
     <tbody>
@@ -30,6 +31,15 @@
             <td>{{$auto->Grandaria_maleter}}</td>
             <td>{{$auto->Tipus_combustible}}</td>
         </tr>
+        <td class="text-left">
+ <form action="{{ route('autos.destroy', $auto->Matricula_auto)}}" method="post" style="display: inline-block">
+  @csrf
+  @method('DELETE')
+  <button class="btn btn-danger btn-sm" type="submit">
+   Esborra
+  </button>
+ </form>
+ </td>
     @endforeach
     </tbody>
 </table>

@@ -39,35 +39,20 @@ class ControladorLloga extends Controller
     return view('dashboard');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($Dni_client, $Matricula_auto)
     {
-        //
+        
+         Lloga::where('Dni_client', $Dni_client)
+                      ->where('Matricula_auto', $Matricula_auto)
+                      ->delete();
+    
+       
+        
+        return redirect()->route('dashboard');
     }
+    
 }

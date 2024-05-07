@@ -31,14 +31,13 @@ class ControladorClient extends Controller
     'Edat' => 'required',
     'Telefon' => 'required',
     'Adreca' => 'required',
-    'adressa' => 'required',
     'Ciutat' => 'required',
     'Pais' => 'required',
     'Email' => 'required',
-    'Numero_del_permis_de_conduccio' => 'required',
-    'Punts_del_permis_de_conduccio' => 'required',
-    'Tipus_de_targeta' => 'required',
-    'Numero_de_la_targeta' => 'required',
+    'Numero_permis_conduccio' => 'required',
+    'Punts_permis_conduccio' => 'required',
+    'Tipus_targeta' => 'required',
+    'Numero_targeta' => 'required',
     ]);
     $Client = Client::create($nouClient);
     return view('dashboard');
@@ -72,8 +71,9 @@ class ControladorClient extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($Dni_client)
     {
-        //
+    $Client = Client::findOrFail($Dni_client)->delete();
+    return view('dashboard');
     }
 }

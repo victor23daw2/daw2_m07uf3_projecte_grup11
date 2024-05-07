@@ -13,6 +13,7 @@
             <td>Darrera hora d'entrada</td>
             <td>Darrera hora de sortida</td>
         </tr>
+        <td>Accions sobre la taula</td> 
     </thead>
     <tbody>
     @foreach($dades_usuaris as $usuari)

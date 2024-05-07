@@ -73,8 +73,9 @@ class ControladorAuto extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($Matricula_auto)
     {
-        //
+    $auto = Auto::findOrFail($Matricula_auto)->delete();
+    return view('dashboard');
     }
 }

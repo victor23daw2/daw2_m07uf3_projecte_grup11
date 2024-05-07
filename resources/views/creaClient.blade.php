@@ -51,24 +51,24 @@
             <input type="text" class="form-control" name="Email"/>
         </div>
         <div class="form-group">           
-            <label for="Numero_del_permis_de_conduccio">Nº permís conducció</label>
-            <input type="text" class="form-control" name="Numero_del_permis_de_conduccio"/>
+            <label for="Numero_permis_conduccio">Nº permís conducció</label>
+            <input type="text" class="form-control" name="Numero_permis_conduccio"/>
         </div>
         <div class="form-group">           
-            <label for="Punts_del_permis_de_conduccio">Punts permís conduir</label>
-            <input type="number" class="form-control" name="Punts_del_permis_de_conduccio"/>
+            <label for="Punts_permis_conduccio">Punts permís conduir</label>
+            <input type="number" class="form-control" name="Punts_permis_conduccio"/>
 			</select>
         </div>
         <div class="form-group">           
-            <label for="Tipus_de_targeta">Tipus de tarjeta</label>
-            <select name="Tipus_de_targeta">
+            <label for="Tipus_targeta">Tipus de tarjeta</label>
+            <select name="Tipus_targeta">
 			    <option value="Dèbit">Dèbit</option>
 			    <option value="Crèdit">Crèdit</option>
 			</select>            
         </div>
         <div class="form-group">           
-            <label for="Numero_de_la_targeta">Numero tarjeta</label>
-            <input type="text" class="form-control" name="Numero_de_la_targeta"/>
+            <label for="Numero_targeta">Numero tarjeta</label>
+            <input type="text" class="form-control" name="Numero_targeta"/>
         </div>        
         <button type="submit" class="btn btn-block btn-primary">Envia</button>
     </form>    

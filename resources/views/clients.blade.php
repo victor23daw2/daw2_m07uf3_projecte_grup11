@@ -8,11 +8,17 @@
         <tr class="table-primary">
             <td>DNI</td>
             <td>Nom i Cognoms</td>
-            <td>Adreça</td>
+            <td>Edat</td>
             <td>Telèfon</td>
+            <td>Adreça</td>
+            <td>Ciutat</td>
+            <td>Pais</td>
             <td>Email</td>
-            <td>Data de Naixement</td>
-            <td>Sexe</td>
+            <td>Numero_permis_conduccio</td>
+            <td>Punts_permis_conduccio</td>
+            <td>Tipus_targeta</td>
+            <td>Numero_targeta</td>
+            <td>Accions sobre la taula</td> 
         </tr>
     </thead>
     <tbody>
@@ -31,6 +37,15 @@
             <td>{{$client->Tipus_targeta}}</td>
             <td>{{$client->Numero_targeta}}</td>
         </tr>
+        <td class="text-left">
+ <form action="{{ route('clients.destroy', $client->Dni_client)}}" method="post" style="display: inline-block">
+  @csrf
+  @method('DELETE')
+  <button class="btn btn-danger btn-sm" type="submit">
+   Esborra
+  </button>
+ </form>
+ </td>
     @endforeach
     </tbody>
 </table>

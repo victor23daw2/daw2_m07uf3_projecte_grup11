@@ -21,10 +21,10 @@ class Client extends Model
         'Ciutat',
         'Pais',
         'Email',
-        'Numero_del_permis_de_conduccio',
-        'Punts_del_permis_de_conduccio',
-        'Tipus_de_targeta',
-        'Numero_de_la_targeta',
+        'Numero_permis_conduccio',
+        'Punts_permis_conduccio',
+        'Tipus_targeta',
+        'Numero_targeta',
     ];
 
     // Métodos útiles para interactuar con la tabla CLIENTS

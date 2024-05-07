@@ -38,6 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('usuaris', ControladorUsuari::class);
     Route::resource('lloga', ControladorLloga::class);
     Route::resource('clients', ControladorClient::class);
+    Route::delete('/lloga/{Dni_client}/{Matricula_auto}', [ControladorLloga::class, 'destroy'])->name('lloga.destroy');
+
 });
 
 Route::middleware('auth')->group(function () {
@@ -47,56 +49,3 @@ Route::middleware('auth')->group(function () {
 });
 require __DIR__ . '/auth.php';
 
-// Route::resource('autos', ControladorAuto::class);
-// Route::resource('usuaris', ControladorUsuari::class);
-// Route::resource('lloga', ControladorLloga::class);
-// Route::resource('clients', ControladorClient::class);
-
-
-// use App\Models\Auto;
-
-
-// // Ruta para agregar registros a la tabla Autos
-// Route::post('/nouauto', function () {
-//     $datos1 = array(
-//         "Matricula_auto" => "ABC123",
-//         "Numero_de_bastidor" => "B12345",
-//         "Marca" => "Toyota",
-//         "Model" => "Corolla",
-//         "Color" => "Blanco",
-//         "Nombre_de_places" => 5,
-//         "Nombre_de_portes" => 4,
-//         "Grandaria_del_maleter" => 480,
-//         "Tipus_de_combustible" => "gasolina"
-//     );
-//     Auto::create($datos1);
-
-//     $datos2 = array(
-//         "Matricula_auto" => "XYZ789",
-//         "Numero_de_bastidor" => "Z98765",
-//         "Marca" => "Honda",
-//         "Model" => "Civic",
-//         "Color" => "Negro",
-//         "Nombre_de_places" => 5,
-//         "Nombre_de_portes" => 4,
-//         "Grandaria_del_maleter" => 500,
-//         "Tipus_de_combustible" => "diesel"
-//     );
-//     Auto::create($datos2);
-// });
-// Route::get('/mostrauto', function () {
-//     $matricula = "ABC123"; // Matricula para buscar
-//     $datos1 = Auto::where("Matricula_auto", $matricula)->first(); // Busca el primer resultado
-//     echo $datos1["color"]."\n";
-// });
-
-// Route::delete('/delauto', function () {
-//     $matricula = "ABC123"; // Matrícula del auto a eliminar
-//     $resultado = Auto::where("Matricula_auto", $matricula)->delete(); // Elimina registros
-
-//     if ($resultado) {
-//         echo "Auto con matrícula " . $matricula . " eliminado.\n";
-//     } else {
-//         echo "No se encontró un auto con matrícula " . $matricula . ".\n";
-//     }
-// });
