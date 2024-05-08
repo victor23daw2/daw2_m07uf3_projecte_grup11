@@ -39,6 +39,7 @@
 </form>
  </td>
     @endforeach
+    <form action="{{ route('lloga.edit', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" method="post" style="display: inline-block">
     </tbody>
 </table>
 </div>

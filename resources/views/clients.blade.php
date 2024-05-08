@@ -38,7 +38,8 @@
             <td>{{$client->Numero_targeta}}</td>
         </tr>
         <td class="text-left">
- <form action="{{ route('clients.destroy', $client->Dni_client)}}" method="post" style="display: inline-block">
+            <a href="{{ route('clients.edit', $client->Dni_client)}}" class="btn btn-primary btn-sm">Edita</a>
+            <form action="{{ route('clients.destroy', $client->Dni_client)}}" method="post" style="display: inline-block">
   @csrf
   @method('DELETE')
   <button class="btn btn-danger btn-sm" type="submit">

@@ -55,17 +55,33 @@ class ControladorClient extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
+    public function edit($dni_client){
+        $dades_client = Client::findOrFail($dni_client);
+        return view('actualitzaClient', compact('dades_client'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $Dni_client)
     {
-        //
+        $noves_dades_clients = $request->validate([
+        'Dni_client' => 'required',
+        'Nom_i_cognoms' => 'required',
+        'Edat' => 'required',
+        'Telefon' => 'required',
+        'Adreca' => 'required',
+        'Ciutat' => 'required',
+        'Pais' => 'required',
+        'Email' => 'required',
+        'Numero_permis_conduccio' => 'required',
+        'Punts_permis_conduccio' => 'required',
+        'Tipus_targeta' => 'required',
+        'Numero_targeta' => 'required',
+    ]);
+    
+        Client::findOrFail($Dni_client)->update($noves_dades_clients);
+        return view('dashboard');
     }
 
     /**

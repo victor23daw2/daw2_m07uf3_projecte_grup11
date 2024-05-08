@@ -57,19 +57,31 @@ class ControladorAuto extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($Matricula_auto)
     {
-        //
+    $dades_auto = Auto::findOrFail($Matricula_auto);
+    return view('actualitzaAuto',compact('dades_auto'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $Matricula_auto)
     {
-        //
+    $noves_dades_auto = $request->validate([
+        'Matricula_auto' => 'required',
+        'Numero_bastidor' => 'required',
+        'Marca' => 'required',
+        'Model' => 'required',
+        'Color' => 'required',
+        'Nombre_places' => 'required',
+        'Nombre_portes' => 'required',
+        'Grandaria_maleter' => 'required',
+        'Tipus_combustible' => 'required',
+    ]);
+    Auto::findOrFail($Matricula_auto)->update($noves_dades_auto);
+    return view('dashboard');
     }
-
     /**
      * Remove the specified resource from storage.
      */

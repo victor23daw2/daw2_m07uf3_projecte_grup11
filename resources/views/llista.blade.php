@@ -46,6 +46,7 @@
             <td>{{$treb->sou}}</td>
         </tr>
         @endforeach
+        <a href="{{ route('trebs.edit', $treb->tid)}}" class="btn btn-primary btn-sm">Edita</a>
     </tbody>
   </table>
  <div>

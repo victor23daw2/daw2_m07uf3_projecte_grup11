@@ -16,9 +16,14 @@ class ControladorLloga extends Controller
         return view('lloga', compact('dades_lloga'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function edit($Dni_client, $Matricula_auto)
+    {
+        $dades_lloga = Lloga::where('Dni_client', $Dni_client)
+            ->where('Matricula_auto', $Matricula_auto)
+            ->firstOrFail();
+
+        return view('actualitzaLloga', compact('dades_lloga'));
+    }
     public function create()
     {
     return view('creaLloga');

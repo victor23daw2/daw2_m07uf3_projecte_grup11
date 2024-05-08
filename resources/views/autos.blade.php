@@ -33,16 +33,17 @@
         </tr>
         <td class="text-left">
  <form action="{{ route('autos.destroy', $auto->Matricula_auto)}}" method="post" style="display: inline-block">
-  @csrf
+ <a href="{{ route('autos.edit', $auto->Matricula_auto)}}" class="btn btn-primary btn-sm">Edita</a>
+ @csrf
   @method('DELETE')
   <button class="btn btn-danger btn-sm" type="submit">
    Esborra
   </button>
  </form>
  </td>
-    @endforeach
-    </tbody>
+</tbody>
 </table>
+@endforeach
 </div>
 <div class="p-6 bg-white border-b border-gray-200">
  <a href="{{ url('dashboard') }}">Torna al dashboard<a/>
