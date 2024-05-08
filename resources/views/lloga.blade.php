@@ -26,10 +26,11 @@
             <td>{{$lloguer->Data_devolucio}}</td>
             <td>{{$lloguer->Lloc_devolucio}}</td>
             <td>{{$lloguer->Preu_per_dia}}</td>
-            <td>{{$lloguer->Prestec_retorn_diposit_ple}}</td>
+            <td>{{$lloguer->Prestec_amb_retorn_deposit_ple}}</td>
             <td>{{$lloguer->Tipus_assegurança}}</td>
         </tr>
         <td class="text-left">
+        <a href="{{ route('lloga.edit', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" class="btn btn-primary btn-sm">Edita</a>
         <form action="{{ route('lloga.destroy', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" method="post" style="display: inline-block">
   @csrf
   @method('DELETE')
@@ -39,7 +40,6 @@
 </form>
  </td>
     @endforeach
-    <form action="{{ route('lloga.edit', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" method="post" style="display: inline-block">
     </tbody>
 </table>
 </div>
