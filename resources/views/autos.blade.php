@@ -30,20 +30,22 @@
             <td>{{$auto->Nombre_portes}}</td>
             <td>{{$auto->Grandaria_maleter}}</td>
             <td>{{$auto->Tipus_combustible}}</td>
+            <td class="text-left">
+                <a href="{{ route('autos.edit', $auto->Matricula_auto)}}" class="btn btn-primary btn-sm">Edita</a>
+                <form action="{{ route('autos.destroy', $auto->Matricula_auto)}}" method="post" style="display: inline-block">@csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-sm" type="submit">
+                        Esborra
+                    </button>
+                </form>
+                <a href="{{ route('autos.show', $auto->Matricula_auto)}}" class="btn btn-info btn-sm">Mostra</a>
         </tr>
-        <td class="text-left">
- <form action="{{ route('autos.destroy', $auto->Matricula_auto)}}" method="post" style="display: inline-block">
- <a href="{{ route('autos.edit', $auto->Matricula_auto)}}" class="btn btn-primary btn-sm">Edita</a>
- @csrf
-  @method('DELETE')
-  <button class="btn btn-danger btn-sm" type="submit">
-   Esborra
-  </button>
- </form>
+ 
  </td>
 </tbody>
-</table>
 @endforeach
+</table>
+
 </div>
 <div class="p-6 bg-white border-b border-gray-200">
  <a href="{{ url('dashboard') }}">Torna al dashboard<a/>

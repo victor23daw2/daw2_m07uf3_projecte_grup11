@@ -49,9 +49,10 @@ class ControladorAuto extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($Matricula_auto)
     {
-        //
+    $dades_auto = Auto::findOrFail($Matricula_auto);
+    return view('mostraAuto',compact('dades_auto'));
     }
 
     /**

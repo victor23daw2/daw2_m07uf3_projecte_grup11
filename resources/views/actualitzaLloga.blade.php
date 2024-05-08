@@ -56,5 +56,5 @@
         </form>
     </div>
 </div>
-<br><a href="{{ url('lloga') }}">Accés directe a la Llista de lloguers</a
+<br><a href="{{ url('lloga') }}">Llista de lloguers</a
 @endsection

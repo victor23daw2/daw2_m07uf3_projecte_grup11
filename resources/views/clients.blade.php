@@ -36,22 +36,22 @@
             <td>{{$client->Punts_permis_conduccio}}</td>
             <td>{{$client->Tipus_targeta}}</td>
             <td>{{$client->Numero_targeta}}</td>
+            <td class="text-left">
+                <a href="{{ route('clients.edit', $client->Dni_client)}}" class="btn btn-primary btn-sm">Edita</a>
+                <form action="{{ route('clients.destroy', $client->Dni_client)}}" method="post" style="display: inline-block">  @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-sm" type="submit">
+                     Esborra
+                    </button>
+                </form>
+    <a href="{{ route('clients.show', $client->Dni_client)}}" class="btn btn-info btn-sm">Mostra</a>         
         </tr>
-        <td class="text-left">
-            <a href="{{ route('clients.edit', $client->Dni_client)}}" class="btn btn-primary btn-sm">Edita</a>
-            <form action="{{ route('clients.destroy', $client->Dni_client)}}" method="post" style="display: inline-block">
-  @csrf
-  @method('DELETE')
-  <button class="btn btn-danger btn-sm" type="submit">
-   Esborra
-  </button>
- </form>
  </td>
+</tbody>
     @endforeach
-    </tbody>
 </table>
 </div>
 <div class="p-6 bg-white border-b border-gray-200">
- <a href="{{ url('dashboard') }}">Torna al dashboard<a/>
- </div>
+    <a href="{{ url('dashboard') }}">Torna al dashboard<a/>
+</div>
 @endsection

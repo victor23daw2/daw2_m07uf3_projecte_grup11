@@ -82,5 +82,14 @@ class ControladorLloga extends Controller
         
         return redirect()->route('dashboard');
     }
+    public function show($Dni_client, $Matricula_auto)
+    {
+        $dades_lloga = Lloga::where('Dni_client', $Dni_client)
+                            ->where('Matricula_auto', $Matricula_auto)
+                            ->firstOrFail();
+        return view('mostraLloga', compact('dades_lloga'));
+    }
+
     
 }
+

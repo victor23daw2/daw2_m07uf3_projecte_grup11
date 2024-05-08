@@ -38,6 +38,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('usuaris', ControladorUsuari::class);
     Route::resource('lloga', ControladorLloga::class);
     Route::resource('clients', ControladorClient::class);
+    Route::get('/lloga/{Dni_client}/{Matricula_auto}', [ControladorLloga::class, 'show'])->name('lloga.show');
     Route::get('/lloga/{Dni_client}/{Matricula_auto}/edit', [ControladorLloga::class, 'edit'])->name('lloga.edit');    Route::patch('/lloga/{Dni_client}/{Matricula_auto}', [ControladorLloga::class, 'update'])->name('lloga.update');
     Route::delete('/lloga/{Dni_client}/{Matricula_auto}', [ControladorLloga::class, 'destroy'])->name('lloga.destroy');
 

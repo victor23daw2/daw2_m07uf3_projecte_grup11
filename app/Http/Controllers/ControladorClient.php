@@ -47,9 +47,10 @@ class ControladorClient extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($Dni_client)
     {
-        //
+    $dades_client = Client::findOrFail($Dni_client);
+    return view('mostraClient',compact('dades_client'));
     }
 
     /**
@@ -92,4 +93,5 @@ class ControladorClient extends Controller
     $Client = Client::findOrFail($Dni_client)->delete();
     return view('dashboard');
     }
+
 }

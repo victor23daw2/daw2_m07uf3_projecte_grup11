@@ -28,22 +28,22 @@
             <td>{{$lloguer->Preu_per_dia}}</td>
             <td>{{$lloguer->Prestec_amb_retorn_deposit_ple}}</td>
             <td>{{$lloguer->Tipus_assegurança}}</td>
+            <td class="text-left">
+                    <a href="{{ route('lloga.edit', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" class="btn btn-primary btn-sm">Edita</a>
+                    <form action="{{ route('lloga.destroy', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" method="post" style="display: inline-block">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger btn-sm" type="submit">
+                            Esborra
+                        </button>
+                    </form>
+                    <a href="{{ route('lloga.show', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" class="btn btn-info btn-sm">Mostra</a> </td>
         </tr>
-        <td class="text-left">
-        <a href="{{ route('lloga.edit', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" class="btn btn-primary btn-sm">Edita</a>
-        <form action="{{ route('lloga.destroy', ['Dni_client' => $lloguer->Dni_client, 'Matricula_auto' => $lloguer->Matricula_auto]) }}" method="post" style="display: inline-block">
-  @csrf
-  @method('DELETE')
-  <button class="btn btn-danger btn-sm" type="submit">
-    Esborra
-  </button>
-</form>
- </td>
-    @endforeach
-    </tbody>
+</tbody>
 </table>
+    @endforeach
 </div>
 <div class="p-6 bg-white border-b border-gray-200">
- <a href="{{ url('dashboard') }}">Torna al dashboard<a/>
- </div>
+    <a href="{{ url('dashboard') }}">Torna al dashboard<a/>
+</div>
 @endsection
